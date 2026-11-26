@@ -1,0 +1,521 @@
+/* ====================
+  基本設定
+==================== */
+
+@charset "UTF-8";
+
+/* 文字コードをUTF-8に指定 */
+* {
+    box-sizing: border-box;
+    /* padding・borderを含めてサイズ計算 */
+    margin: 0;
+    /* 外側余白をリセット */
+    padding: 0;
+    /* 内側余白をリセット */
+}
+
+/* ====================
+  全体スタイル
+==================== */
+
+body {
+    color: #222;
+    /* 基本文字色 */
+    background-color: #fff;
+    /* 背景色 */
+}
+
+/* ====================
+  ヘッダー
+==================== */
+
+header {
+    background-color: #f2f2f2;
+    /* ヘッダー背景色 */
+    padding: 0 0 60px;
+    /* 下側に余白 */
+    text-align: center;
+    /* 中央揃え */
+    width: 100%;
+    /* 横幅100% */
+}
+
+/* ロゴ */
+.logo {
+    background-color: #fff;
+    /* ロゴ背景色 */
+    padding: 20px 0;
+    /* 上下余白 */
+    font-size: 36px;
+    /* 文字サイズ */
+    font-weight: bold;
+    /* 太字 */
+    margin-bottom: 80px;
+    /* 下余白 */
+}
+
+/* コピー全体 */
+.copy {
+    max-width: 1200px;
+    /* 最大横幅 */
+    margin: 0 auto;
+    /* 中央寄せ */
+}
+
+/* コピー見出し */
+.copy h1 {
+    font-size: 36px;
+    /* 見出しサイズ */
+    font-weight: bold;
+    /* 太字 */
+    color: #000;
+    /* 文字色 */
+    margin-bottom: 32px;
+    /* 下余白 */
+    line-height: 1.4;
+    /* 行間 */
+}
+
+/* コピー本文 */
+.copy p {
+    font-size: 16px;
+    /* 文字サイズ */
+    color: #000;
+    /* 文字色 */
+    line-height: 1.75;
+    /* 行間 */
+    margin-bottom: 5px;
+    /* 下余白 */
+}
+
+/* ====================
+  メインセクション
+==================== */
+
+section {
+    max-width: 1200px;
+    /* 最大横幅 */
+    margin: 150px auto;
+    /* 上下余白＋中央寄せ */
+}
+
+/* セクション見出し */
+section h2 {
+    text-align: center;
+    /* 中央揃え */
+    margin-bottom: 40px;
+    /* 下余白 */
+}
+
+/* セクション補足ラベル */
+.section-label {
+    font-size: 18px;
+    /* 文字サイズ */
+    color: #666;
+    /* 補足用文字色 */
+    margin-bottom: 10px;
+    /* 下余白 */
+    display: block;
+    /* ブロック要素化 */
+}
+
+/* セクションタイトル */
+.section-title {
+    font-size: 28px;
+    /* タイトルサイズ */
+    font-weight: bold;
+    /* 太字 */
+    color: #000;
+    /* 文字色 */
+}
+
+/* ====================
+  ボタン
+==================== */
+
+.btn-detail {
+    border: 2px solid #1571da;
+    /* 枠線 */
+    background-color: #fff;
+    /* 背景色 */
+    color: #1571da;
+    /* 文字色 */
+    display: block;
+    /* ブロック要素 */
+    width: 180px;
+    /* 横幅固定 */
+    height: 50px;
+    /* 高さ */
+    margin: 40px auto 0;
+    /* 上余白＋中央寄せ */
+    padding: 0 40px;
+    /* 左右余白 */
+    border-radius: 4px;
+    /* 角丸 */
+    font-size: 16px;
+    /* 文字サイズ */
+    font-weight: bold;
+    /* 太字 */
+    cursor: pointer;
+    /* カーソル変更 */
+    align-items: center;
+    /* （未使用）縦中央 */
+    justify-content: center;
+    /* （未使用）横中央 */
+}
+
+/* ボタンホバー時 */
+.btn-detail:hover {
+    background-color: #f0f7ff;
+    /* 背景色変更 */
+}
+
+/* ====================
+  理由カード
+==================== */
+
+.reason-cards {
+    display: flex;
+    /* 横並び */
+    gap: 30px;
+    /* カード間隔 */
+    margin-bottom: 40px;
+    /* 下余白 */
+    justify-content: center;
+    /* 中央寄せ */
+}
+
+/* 理由カード本体 */
+.card-reason {
+    background: url("https://placehold.jp/9197ee/ffffff/400x300.png?text=bg-img") center top / cover no-repeat;
+    /* 背景画像 */
+    width: 380px;
+    /* 横幅 */
+    min-height: 280px;
+    /* 最低高さ */
+    padding: 20px 0;
+    /* 上下余白 */
+    border-radius: 0;
+    /* 角丸なし */
+    display: flex;
+    /* フレックス */
+    flex-direction: column;
+    /* 縦並び */
+    gap: 54px;
+    /* 要素間隔 */
+    align-items: center;
+    /* 横中央 */
+    justify-content: center;
+    /* 縦中央 */
+    text-align: center;
+    /* 文字中央 */
+}
+
+/* 番号 */
+.card-reason-number {
+    font-size: 60px;
+    /* 数字サイズ */
+    font-weight: bold;
+    /* 太字 */
+    color: #999;
+    /* 文字色 */
+}
+
+/* 英字ラベル */
+.card-reason-label {
+    font-size: 12px;
+    /* 文字サイズ */
+    color: #999;
+    /* 文字色 */
+}
+
+/* 説明文 */
+.card-reason-text {
+    font-size: 18px;
+    /* 文字サイズ */
+    color: #000;
+    /* 文字色 */
+    font-weight: bold;
+    /* 太字 */
+    line-height: 1.5;
+    /* 行間 */
+}
+
+/* ====================
+  機能カード
+==================== */
+
+.func-cards {
+    display: flex;
+    /* 横並び */
+    flex-wrap: wrap;
+    /* 折り返し */
+    gap: 50px 30px;
+    /* 行・列間隔 */
+    margin-bottom: 40px;
+    /* 下余白 */
+}
+
+/* 機能カード共通 */
+.card-func {
+    background: #f2f2f2;
+    /* 背景色 */
+    display: flex;
+    /* 横並び */
+    gap: 30px;
+    /* 要素間隔 */
+    align-items: center;
+    /* 縦中央 */
+}
+
+/* 大サイズカード */
+.card-func.large {
+    width: 565px;
+    /* 横幅 */
+    padding: 30px 40px;
+    /* 内側余白 */
+}
+
+/* 小サイズカード */
+.card-func.small {
+    width: 366px;
+    /* 横幅 */
+    padding: 40px;
+    /* 内側余白 */
+}
+
+/* アイコン */
+.card-func-icon {
+    width: 130px;
+    /* 横幅 */
+    height: 130px;
+    /* 高さ */
+    object-fit: cover;
+    /* 画像調整 */
+    border-radius: 50%;
+    /* 円形 */
+    display: flex;
+    /* 中央配置 */
+    align-items: center;
+    /* 縦中央 */
+    justify-content: center;
+    /* 横中央 */
+    font-size: 12px;
+    /* 文字サイズ */
+    color: #999;
+    /* 文字色 */
+}
+
+/* 小カード用アイコン */
+.card-func.small .card-func-icon {
+    width: 100px;
+    /* 横幅 */
+    height: 100px;
+    /* 高さ */
+}
+
+/* テキスト領域 */
+.card-func-text {
+    flex: 1;
+    /* 残り幅を使用 */
+}
+
+/* 機能タイトル */
+.card-func-text h3 {
+    font-size: 20px;
+    /* 文字サイズ */
+    color: #1571da;
+    /* 強調色 */
+    font-weight: bold;
+    /* 太字 */
+    margin-bottom: 18px;
+    /* 下余白 */
+}
+
+/* 機能説明 */
+.card-func-text p {
+    font-size: 16px;
+    /* 文字サイズ */
+    color: #000;
+    /* 文字色 */
+    line-height: 1.75;
+    /* 行間 */
+}
+
+/* ====================
+  企業ロゴ
+==================== */
+
+.logo-corp-cards {
+    border: 2px solid #f2f2f2;
+    /* 枠線 */
+    padding: 60px;
+    /* 内側余白 */
+    display: flex;
+    /* 横並び */
+    flex-wrap: wrap;
+    /* 折り返し */
+    gap: 20px 0;
+    /* 間隔 */
+    justify-content: space-between;
+    /* 等間隔 */
+    margin-bottom: 40px;
+    /* 下余白 */
+}
+
+/* ロゴカード */
+.card-logo {
+    width: 156px;
+    /* 横幅 */
+    height: 60px;
+    /* 高さ */
+    object-fit: cover;
+    /* 画像調整 */
+    display: flex;
+    /* 中央配置 */
+    align-items: center;
+    /* 縦中央 */
+    justify-content: center;
+    /* 横中央 */
+    font-size: 12px;
+    /* 文字サイズ */
+    color: #999;
+    /* 文字色 */
+}
+
+/* ====================
+  採用カード
+==================== */
+
+.recruit-cards {
+    display: flex;
+    /* 横並び */
+    gap: 30px;
+    /* 間隔 */
+    margin-bottom: 40px;
+    /* 下余白 */
+    justify-content: center;
+    /* 中央寄せ */
+}
+
+/* 採用カード本体 */
+.card-recruit {
+    width: 380px;
+    /* 横幅 */
+    display: flex;
+    /* 縦並び */
+    flex-direction: column;
+    /* 縦方向 */
+    gap: 26px;
+    /* 要素間隔 */
+}
+
+/* 採用画像 */
+.card-recruit-img {
+    height: 200px;
+    /* 高さ */
+    object-fit: cover;
+    /* 画像調整 */
+    display: flex;
+    /* 中央配置 */
+    align-items: center;
+    /* 縦中央 */
+    justify-content: center;
+    /* 横中央 */
+    font-size: 12px;
+    /* 文字サイズ */
+    color: #999;
+    /* 文字色 */
+}
+
+/* 採用情報コンテンツ */
+.card-recruit-content {
+    display: flex;
+    /* 縦並び */
+    flex-direction: column;
+    gap: 5px;
+    /* 要素間隔 */
+}
+
+/* 求人タイトル */
+.card-recruit-title {
+    font-size: 20px;
+    /* 文字サイズ */
+    color: #1571da;
+    /* 強調色 */
+    font-weight: bold;
+    /* 太字 */
+    line-height: 1.4;
+    /* 行間 */
+    height: 62px;
+    /* 高さ固定 */
+    display: flex;
+    /* 中央配置 */
+    align-items: center;
+}
+
+/* 会社名 */
+.card-recruit-company {
+    font-size: 16px;
+    /* 文字サイズ */
+    color: #222;
+    /* 文字色 */
+    font-weight: bold;
+    /* 太字 */
+    height: 28px;
+    /* 高さ固定 */
+    display: flex;
+    /* 中央配置 */
+    align-items: center;
+}
+
+/* 募集詳細 */
+.card-recruit-info {
+    display: flex;
+    /* 横並び */
+    flex-wrap: wrap;
+    /* 折り返し */
+    gap: 10px 0;
+    /* 行間隔 */
+    font-size: 14px;
+    /* 文字サイズ */
+    margin-top: 5px;
+    /* 上余白 */
+}
+
+/* 項目名 */
+.card-recruit-info dt {
+    width: 6em;
+    /* ラベル幅 */
+    font-weight: normal;
+    /* 通常太さ */
+    color: #333;
+    /* 文字色 */
+}
+
+/* 項目内容 */
+.card-recruit-info dd {
+    width: calc(100% - 6em);
+    /* 残り幅 */
+    font-weight: bold;
+    /* 太字 */
+    color: #000;
+    /* 文字色 */
+}
+
+/* ====================
+  フッター
+==================== */
+
+footer {
+    background-color: #222;
+    /* 背景色 */
+    color: #fff;
+    /* 文字色 */
+    text-align: center;
+    /* 中央揃え */
+    padding: 40px 20px;
+    /* 内側余白 */
+    font-size: 14px;
+    /* 文字サイズ */
+}
